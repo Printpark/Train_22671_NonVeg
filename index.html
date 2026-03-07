@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Non Veg Menu – Train 20666</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: -40px auto 30px;
+      padding: 0 15px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      text-align: center;
+      color: #c0392b;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    .info strong {
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER IMAGE -->
+  <img src="train.jpg" alt="Train Image" class="header-img" />
+
+  <div class="container">
+    <div class="card">
+
+      <h2>Non Veg </h2>
+
+      <div class="info">
+        <strong>Licensee :</strong> M/S Sopan Restaurant 
+      </div>
+
+      <div class="info">
+        <strong>FSSAI No. :</strong> 10020912000133
+      </div>
+
+      <div class="info">
+        <strong>Train Name &amp; No. :</strong> Vande Bharat Express – 22671
+      </div>
+
+      <div class="info">
+        <strong>Menu :</strong>
+        Omlette 100gms / veg cutlet 100gms + 2 slice of brown bread (50g)
+      </div>
+
+      <!-- ✅ DATE EXACT SAME POSITION AS VEG -->
+      <div class="info">
+        <strong>Date :</strong> <span id="todayDateNonVeg"></span>
+      </div>
+
+      <!-- ✅ NOTE LAST -->
+      <div class="info">
+        <strong>Note :</strong> <b><i>For Immediate Consumption</i></b>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DATE SCRIPT -->
+  <script>
+    const todayNV = new Date();
+    const optionsNV = { day: 'numeric', month: 'long', year: 'numeric' };
+    document.getElementById('todayDateNonVeg').textContent =
+      todayNV.toLocaleDateString('en-IN', optionsNV);
+  </script>
+
+</body>
+</html>
